@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :activities
+  resources :people
   resources :frontpages
   root 'frontpages#index'
   get 'budget' => 'frontpages#budget'
+  get 'people' => 'people#index'
+  get 'activities' => 'activities#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
