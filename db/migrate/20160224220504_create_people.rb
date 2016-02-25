@@ -4,7 +4,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :name
       t.string :group
       t.boolean :invited
-      t.boolean :going
+      t.integer :going
 
       t.timestamps null: false
     end
