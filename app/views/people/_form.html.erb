@@ -20,12 +20,14 @@
     <%= f.text_field :group %>
   </div>
   <div class="field">
-    <%= f.label :invited %><br>
+    <b>Invitation Sent</b><br>
     <%= f.check_box :invited %>
   </div>
   <div class="field">
-    <%= f.label :going %><br>
-    <%= f.number_field :going %>
+    <b>Attending</b><br>
+    <%= f.radio_button :going, '0' %> Unknown<br>
+    <%= f.radio_button :going, '1' %> No<br>
+    <%= f.radio_button :going, '2' %> Yes<br>
   </div>
   <div class="actions">
     <%= f.submit %>
