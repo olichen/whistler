@@ -24,8 +24,8 @@
     <tbody>
       <% @people.each do |person| %>
         <tr>
-          <td><%= person.name %></td
->d          <td><%= person.group %></td>
+          <td><%= person.name %></td>
+          <td><%= person.group %></td>
           <td><%= person.invited ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
           <td><%= person.going ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
         </tr>
