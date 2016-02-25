@@ -1,3 +1,13 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron-people {
+  background: url(/assets/people.jpg) no-repeat center;
+  background-size: cover;
+  clip: rect(0px, 1024px, 425px, 0px);
+}
+
+sortvalue {
+  visibility: hidden;
+}

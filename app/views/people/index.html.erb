@@ -1,17 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-PLACEHOLDER
+<div class="jumbotron jumbotron-people">
+  <div class="container">
+    <h1>People</h1>
+    <p></p>
+  </div>
+</div>
 
-<h1>Listing People</h1>
+<h1>People</h1>
 
-<table>
+<table id="datatable">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Group</th>
-      <th>Invited</th>
-      <th>Going</th>
-      <th colspan="3"></th>
+      <th>Name</th>
+      <th>True</th>
+      <th>False</th>
     </tr>
   </thead>
 
@@ -20,11 +24,8 @@ PLACEHOLDER
       <tr>
         <td><%= person.name %></td>
         <td><%= person.group %></td>
-        <td><%= person.invited %></td>
-        <td><%= person.going %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= person.invited ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
+        <td><%= person.going ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
       </tr>
     <% end %>
   </tbody>

@@ -6,11 +6,10 @@
 .jumbotron {
   background: url(/assets/whistler.jpg) no-repeat center;
   background-size: cover;
-  background-min-width: 1200px;
   margin-top: -50px;
 }
 
-.jumbotron h1 {
+.jumbotron .container h1 {
   color: white;
   font-weight: bold;
 }
