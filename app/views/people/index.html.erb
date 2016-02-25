@@ -1,36 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<div class="jumbotron jumbotron-people">
+<!--div class="jumbotron jumbotron-people">
   <div class="container">
     <h1>People</h1>
     <p></p>
   </div>
-</div>
+</div-->
 
-<h1>People</h1>
 
-<table id="datatable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Name</th>
-      <th>True</th>
-      <th>False</th>
-    </tr>
-  </thead>
+<div class="container">
+  <h1>People</h1>
 
-  <tbody>
-    <% @people.each do |person| %>
+  <table id="datatable" class="compact hover order-column">
+    <thead>
       <tr>
-        <td><%= person.name %></td>
-        <td><%= person.group %></td>
-        <td><%= person.invited ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
-        <td><%= person.going ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
+        <th class="col-md-2">Name</th>
+        <th class="col-md-2">Name</th>
+        <th class="col-md-1">True</th>
+        <th class="col-md-1"s>False</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= person.name %></td
+>d          <td><%= person.group %></td>
+          <td><%= person.invited ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
+          <td><%= person.going ? '<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><sortvalue>1</sortvalue>'.html_safe : '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span><sortvalue>0</sortvalue>'.html_safe %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Add Person', new_person_path %>
+</div>
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>

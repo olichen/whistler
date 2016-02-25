@@ -30,28 +30,19 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(person_params)
 
-    respond_to do |format|
-      if @person.save
-        format.html { redirect_to @person, notice: 'Person was successfully created.' }
-        format.json { render :show, status: :created, location: @person }
-      else
-        format.html { render :new }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
-      end
+    if @person.save
+      redirect_to people_path
+    else
     end
   end
 
   # PATCH/PUT /people/1
   # PATCH/PUT /people/1.json
   def update
-    respond_to do |format|
-      if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Person was successfully updated.' }
-        format.json { render :show, status: :ok, location: @person }
-      else
-        format.html { render :edit }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
-      end
+    if @person.update(person_params)
+      redirect_to "/people/admin"
+    else
+      flash[:failure] = "uhhh something went wrong"
     end
   end
 
@@ -59,10 +50,7 @@ class PeopleController < ApplicationController
   # DELETE /people/1.json
   def destroy
     @person.destroy
-    respond_to do |format|
-      format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to "/people/admin"
   end
 
   private

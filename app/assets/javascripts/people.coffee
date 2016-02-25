@@ -4,4 +4,5 @@
 
 jQuery ->
   $('#datatable').dataTable
-    paging:false
+    paging: false
+    order: [[1, "desc"]]
