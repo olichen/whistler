@@ -18,6 +18,16 @@
   color: white;
 }
 
+.jumbotron p .btn {
+  color: white;
+  font-weight: bold;
+}
+
+.jumbotron p .btn-default:hover {
+  color: #dddddd;
+  border-color: #dddddd;
+}
+
 .container {
   max-width: 800px;
 }

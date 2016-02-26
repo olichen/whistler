@@ -35,12 +35,15 @@
             <%= nav_link("People", people_path) %>
             <%= nav_link("Budget", budget_path) %>
             <%= nav_link("Activities", activities_path) %>
+            <%= nav_link("Prepare", prepare_path) %>
           </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
     </nav>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
     
   </body>
 </html>

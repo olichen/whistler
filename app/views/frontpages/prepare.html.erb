@@ -1,0 +1,89 @@
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag("/assets/placeholder.jpg", :class=>"first-slide") %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Example headline.</h1>
+          <p>forward and back buttons arrows make annoying boxes</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag("/assets/placeholder.jpg", :class=>"second-slide") %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Is this really necessary??</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag("/assets/placeholder.jpg", :class=>"third-slide") %>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>idk</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!-- /.carousel -->
+
+<!-- START THE FEATURETTES -->
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">Start preparing now! <span class="text-muted">textextext.</span></h2>
+    <p class="lead">plane tickets, cabin rentals, organize cars/shuttles, etc etc</p>
+  </div>
+  <div class="col-md-5">
+    <%= image_tag("/assets/placeholder.jpg", :class=>"featurette-image img-responsive center-block img-circle") %>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7 col-md-push-5">
+    <h2 class="featurette-heading">Before arriving. <span class="text-muted"> textextxt.</span></h2>
+    <p class="lead">shuttle tickets, car rentals, packing list, etc</p>
+  </div>
+  <div class="col-md-5 col-md-pull-7">
+    <%= image_tag("/assets/placeholder.jpg", :class=>"featurette-image img-responsive center-block img-circle") %>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading">At Whistler. <span class="text-muted"> more textextxt.</span></h2>
+    <p class="lead"> Lift tickets, ski/snowboard rentals, food, activity tickets, etc. link to activities page</p>
+  </div>
+  <div class="col-md-5">
+    <%= image_tag("/assets/placeholder.jpg", :class=>"featurette-image img-responsive center-block img-circle") %>
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES -->
