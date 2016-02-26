@@ -1,7 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Activities</h1>
-<p class="lead">Filler text  donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Activities</h1>
+    <p>Filler text  donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+    <p><%= link_to "Learn More &raquo".html_safe, "http://www.whistler.com/activities/", class: "btn btn-success btn-lg" %></p>
+  </div>
+</div>
 
 <% @activities.each do |activity| %>
   <hr>
